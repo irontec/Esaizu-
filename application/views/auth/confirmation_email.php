@@ -1,0 +1,10 @@
+<?php
+    $this->lang->load("auth");
+    printf(
+        $this->lang->line("confirmationEmail"),
+        $obj->getUserName(),
+        $this->config->item('appName'),
+        site_url("login/confirm/".$obj->getId()."/".$obj->getActivationCode()),
+        site_url("login/confirm/".$obj->getId()."/".$obj->getActivationCode())
+    );
+?>
